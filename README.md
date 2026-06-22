@@ -71,6 +71,28 @@ Claude 会：
 7. **停下来** → 给你 PR 链接 + diff 摘要 → 等你确认
 8. 你回复"合并"后 → squash 合并 + 删分支 + 自动关 Issue
 
+## 实际运行示例
+
+以本仓库自己的一次循环为例（删除 README 里一行测试残留）：
+
+```text
+你 > /github
+
+Claude > 现状：main 上 README 有未提交改动，属于 chore 清理。
+         ① 建 Issue #3「清理 README 末尾的测试残留行」
+         ② 切分支 chore/remove-test-line
+         ③ commit + push
+         ④ 开 PR #4，描述写 Closes #3
+         ⑤ 贴自审 comment
+         🛑 停下来：PR #4 已就绪，diff 为删除一行，确认合并吗？
+
+你 > 合并
+
+Claude > ✅ PR #4 squash 合并进 main，Issue #3 自动关闭，分支已删除。
+```
+
+一次循环同时覆盖 Issues / Pull requests / Code review / Commits 四个维度。
+
 ## 自定义
 
 技能的全部行为都写在 `skills/github/SKILL.md` 里，纯自然语言，直接改即可。
