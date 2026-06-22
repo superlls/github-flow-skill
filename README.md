@@ -3,6 +3,8 @@
 > 一个 Claude Code 技能（Skill）：把"裸 `git push`"升级成一条正规的 GitHub 协作流程。
 > 一条命令 `/github`，让你的贡献雷达图四个维度——**Commits / Issues / Pull requests / Code review**——同时刷起来。
 
+[English →](./README.en.md)
+
 ## 这是什么
 
 很多人（尤其是个人项目）习惯直接 `git commit && git push` 到 `main`，结果 GitHub
