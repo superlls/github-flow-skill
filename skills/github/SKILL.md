@@ -28,9 +28,10 @@ Commits / Issues / Pull requests / Code review 四个维度同时 +1。
 按顺序确认，任何一项不满足就停下来告诉用户，别硬跑：
 
 1. 当前目录是 git 仓库：`git rev-parse --is-inside-work-tree`
-2. `gh` 已安装且已登录：`gh auth status`（未登录就提示用户 `gh auth login`）
-3. 仓库有 GitHub remote：`git remote -v`（没有就提示用户先 `gh repo create` 或加 remote）
-4. 有改动要提交：`git status --porcelain`（完全干净就告诉用户没东西可提交）
+2. `gh` 已安装：`gh --version`（未安装就提示用户 `brew install gh` 或见 https://cli.github.com/）
+3. `gh` 已登录：`gh auth status`（未登录就提示用户 `gh auth login`）
+4. 仓库有 GitHub remote：`git remote -v`（没有就提示用户先 `gh repo create` 或加 remote）
+5. 有改动要提交：`git status --porcelain`（完全干净就告诉用户没东西可提交）
 
 ## 执行步骤
 
